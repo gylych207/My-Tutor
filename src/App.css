@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+header{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding: 1px 3%;
+  border: 1px solid orange;
+  
+}
+.nav_links{
+  list-style-type: none;
+}
+.nav_links li{
+  display:inline-block;
+  padding: 0px 8px;
+}
+.btnTutors{
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  font-family: lato;
+  color:#0779E4;
+  font-weight: 700;
+  
+}
+.btnAdd{
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  font-family: lato;
+  color: #0779E4;
+  font-weight: 700;
+}
+.btnTutors:hover{
+  color:#B97EBB;
+}
+.btnAdd:hover{
+  color:#B97EBB;
+}
+.wallpaper{
+width:auto;
+height: 100vh;
+border: 1px solid #707070;
+background-image: linear-gradient(to right, #0779e4 0%, #c32fc8 100%);
+opacity: 0.41;
+}
+.image{
+width: 120px;
+height: 100px;
+border-radius: 10px;
+}
+.tutorsPage{
+  border: 5px solid orange;
+
+}
+.tutorsContainer {
+  border: 5px solid red;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex:4;
+}
+.tutorsContainer > div {
+  margin: 6px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tutorContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.name{
+  padding:0;
+  font-family: "Product Sans";
+  color:#3592ea;
+  font-weight:700;
+  margin-bottom: 1px;
+}
+.price{
+  margin-top:1px;
+}
+.addPage{
+  border: 2px solid red;
+  height:100vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  
+  /* background-color: #bedcfa; */
+}
+.addTutors{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 500px;
+height: 90vh;
+background-image: linear-gradient(180deg, #0779e4 0%, #0f79e2 10%, #1479e1 11%, #737ccb 46%, #827cc8 57%, #977dc3 66%, #a47dc0 71%, #aa7dbf 76%, #b97ebb 100%);
+opacity: 0.5;
+border-radius: 30px;
+border: 2px solid orange;
+
+
+}
+
+.addTutors input{
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  border-style: none;
+  border: 1px solid green;
+}
+.form{
+  border: 1px solid blue;
+  display: inline-flex;
+  flex-direction: column;
+  height:350px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.form > input {
+  margin: 3px;
+}
+.addTutors p{
+  color:white;
+  font-family: Lato;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+}
+input[type="submit"]{
+  margin-top:40px;
+  height: 40px;
+  font-size: 20px;
+  font-family: Lato;
+  font-weight: 700;
   color: white;
+  background-color: #590995;
+  width:auto;
+  
 }
-
-.App-link {
-  color: #61dafb;
+::placeholder {
+  font-family: Lato;
+  font-weight: 400;
+  color:#0779e4;
+  justify-content:center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[name='about']{
+  height: 130px;
+  padding-left:0;
+  padding-top:0;
+  padding-bottom:0.4em;
+  padding-right: 0.4em;
 }

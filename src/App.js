@@ -1,39 +1,40 @@
 import { useEffect, useState } from 'react';
+import { Route } from "react-router-dom";
 import axios from 'axios';
 import { baseURL, config } from "./services";
 import './App.css';
-import Joke from "./components/Joke.jsx";
-import Nav from "./components/Nav.jsx";
-import { Route } from "react-router-dom";
-import Form from "./components/Form.jsx"
+import Tutors from './components/Tutors';
+import AddTutor from './components/AddTutor';
+import Nav from './components/Nav';
+import TutorInfo from "./components/TutorInfo"
+
 
 function App() {
-  const [jokes, setJokes] = useState([]);
-  const [toggleFetch,setToggleFetch] = useState(false);
+  const [data, setData] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
+
 
   useEffect(() => {
-    const getJokes = async () => {
+    const getData = async () => {
       let resp = await axios.get(baseURL, config
       );
-      setJokes(resp.data.records);
+      // console.log(resp.data.records);
+      setData(resp.data.records);
     }
-    getJokes();
-  }, [toggleFetch]);
-  
+    getData();
+  }, []);
   return (
     <div className="App">
       <Nav />
-      <Route exact path="/">
-        {jokes.map((joke) => <Joke joke={joke} key={joke.id} setToggleFetch={setToggleFetch}/>)}
+      <Route path="/tutors">
+        <Tutors data={data} />
       </Route>
-
-      <Route path="/new" >
-        <Form jokes={jokes} setToggleFetch={setToggleFetch}/>
+      <Route path="/AddTutor" >
+        <AddTutor setToggleFetch={setToggleFetch}/>
       </Route>
-      <Route path="/edit/:id" >
-        <Form jokes={jokes} setToggleFetch={setToggleFetch}/>
-      </Route>
-      
+      <Route path="/TutorInfo">
+        <TutorInfo />
+        </Route>
     </div>
   );
 }
