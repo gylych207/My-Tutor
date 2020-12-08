@@ -1,11 +1,10 @@
-const { default: src } = require("*.avif");
-
-import React from 'react';
-
-const Payment = () => {
+import React, { useEffect, useState } from "react";
+const Payment = (props) => {
   return (
     <div className="paymentPage">
-      
+      <p>{props.tutorInfo.price} will be charged</p>
+
+  
     </div>
   );
 };

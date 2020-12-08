@@ -4,7 +4,7 @@ header{
   justify-content:flex-end;
   align-items:center;
   padding: 1px 3%;
-  border: 1px solid orange;
+  border: 2px solid indigo;
   
 }
 .nav_links{
@@ -37,8 +37,8 @@ header{
 }
 .wallpaper{
 width:auto;
-height: 100vh;
-border: 1px solid #707070;
+height: 70vh;
+border: 4px solid green;
 background-image: linear-gradient(to right, #0779e4 0%, #c32fc8 100%);
 opacity: 0.41;
 }
@@ -46,10 +46,10 @@ opacity: 0.41;
 width: 120px;
 height: 100px;
 border-radius: 10px;
+box-shadow: #5b5be733 0px 8px 29px 0px;
 }
 .tutorsPage{
-  border: 5px solid orange;
-
+  border: 5px solid black;
 }
 .tutorsContainer {
   border: 5px solid red;
@@ -57,6 +57,7 @@ border-radius: 10px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex:4;
+  background-color:#edf7fc;
 }
 .tutorsContainer > div {
   margin: 6px;
@@ -149,3 +150,78 @@ input[name='about']{
   padding-bottom:0.4em;
   padding-right: 0.4em;
 }
+.search {
+  width:200px;
+  margin-top:30%;
+  margin-left:40%;
+  height: 40px;
+  border-radius:10px;
+  border-style: none;
+  opacity: 0.7;
+  text-align: center;
+  font-size: 20px;
+}
+.portfolioImg{
+  height: 250px;
+  width: 270px;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.imgName{
+  height: 500px;
+  border: 1px solid red;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  width:auto;
+}
+.imgName > img{
+  margin-bottom:140px;
+  }
+.imgName p{
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 20px;
+  color:white;
+  text-transform: uppercase;
+align-self: center;
+}
+.infoPage{
+  display:flex;
+ background-image: linear-gradient(180deg, #0779e4 0%, #0f79e2 10%, #1479e1 11%, #737ccb 46%, #827cc8 57%, #977dc3 66%, #a47dc0 71%, #aa7dbf 76%, #b97ebb 100%);
+}
+.about{
+  display:flex;
+  align-items:stretch;
+  flex-direction:column;
+  margin-left: 30px;
+  border: 1px solid green;
+  font-family: "Product Sans";
+  color: white;
+  
+}
+.about > p{
+  margin-top: 100px;
+  margin-right: 80px;
+}
+.book{
+align-self: baseline;
+margin-left: 35%;
+}
+.example_c {
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  }
+  .example_c:hover {
+    color: #ffffff ;
+    background: #b088f9;
+    border-color: #b088f9;
+    transition: all 0.4s ease 0s;
+    }
