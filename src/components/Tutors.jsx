@@ -7,7 +7,7 @@ import TutorInfo from "./TutorInfo";
 import { useHistory } from "react-router-dom";
 
 const Tutors = (props) => {
-  let { id } = useParams();
+  // let { id } = useParams();
   const [tutor, setTutor] = useState("");
   const [search, setSearch] = useState("");
 

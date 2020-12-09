@@ -299,9 +299,10 @@ letter-spacing: 2.22px;
 text-align: center;
 text-transform: uppercase;
 font-weight: bold;
+}
 
-
-
+.getHelp:hover{
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .callAction{
   align-self: center;
