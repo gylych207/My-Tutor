@@ -16,7 +16,7 @@ const TutorInfo = (props) => {
       </div>
       <div className="about">
         <p>{props.tutorInfo.about}</p>
-        <div class="button_cont" align="center"><Link to='/Payment'><span class="example_c" target="_blank" rel="nofollow noopener">BOOK</span></Link></div>
+        <div class="button_cont" align="center"><Link to='/Payment'><span class="example_c" target="_blank" rel="nofollow noopener" onClick={()=>props.setTotal(parseInt(number)*parseInt(props.tutorInfo.price))}>BOOK</span></Link></div>
         <div className="otherInfo">
           <p className="tutoringInfo">Subject: {props.tutorInfo.lessons}</p>
           <p className="tutoringInfo">Price: {props.tutorInfo.price}$</p>

@@ -9,11 +9,13 @@ import AddTutor from './components/AddTutor';
 import Nav from './components/Nav';
 import TutorInfo from "./components/TutorInfo";
 import Payment from "./components/Payment"
+import Home from "./components/Home.jsx"
 
 
 function App() {
   const [data, setData] = useState([]);
-  const[tutorInfo,setTutorInfo] = useState(null);
+  const [tutorInfo, setTutorInfo] = useState(null);
+  const[total,setTotal] = useState(null);
   const [toggleFetch, setToggleFetch] = useState(false);
 
 
@@ -39,11 +41,14 @@ function App() {
         <AddTutor setToggleFetch={setToggleFetch}/>
       </Route>
       <Route path="/TutorInfo" >
-        <TutorInfo tutorInfo={tutorInfo}/>
+        <TutorInfo tutorInfo={tutorInfo} setTotal={setTotal}/>
       </Route>
       <Route path="/Payment"  >
-        <Payment tutorInfo={tutorInfo}/>
+        <Payment tutorInfo={tutorInfo} total={total}/>
       </Route>
+      <Route exact path="/">
+        <Home />
+        </Route>
     </div>
     
   );
