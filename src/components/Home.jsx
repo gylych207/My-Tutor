@@ -4,8 +4,9 @@ import '../App.css';
 const Home = () => {
   return (
     <div className="homePage">
-      <button className="getHelp">Get Instant Home Work Help</button>
-      <img src="/images/picture.jpg" alt=''/>
+      <p className='get'>GET THE KNOWLEDGE YOU NEED</p>
+      <div className='callAction'><button className="getHelp">Get Instant Home Work Help</button></div>
+      <img src="/images/picture.svg" alt=''/>
     </div>
   );
 };
