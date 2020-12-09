@@ -67,11 +67,12 @@ box-shadow: #98acf8 0px 8px 15px 0px;
  
 }
 .tutorsContainer {
-  display: inline-flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
   justify-content: space-evenly;
-  flex:4;
-  background-color:#edf7fc;
+  background-color:#edf7fc; */
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 .tutorsContainer > div {
   margin: 6px;
@@ -81,6 +82,7 @@ box-shadow: #98acf8 0px 8px 15px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: stretch;
 }
 .name{
   padding:0;
@@ -318,6 +320,12 @@ input[type="submit"]{
 }
 /* Mobile Size */
 @media only screen and (max-width: 600px) {
+  .tutorsContainer{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color:#edf7fc;
+  }
   .getContainer{
     margin-top:50px;
    display:flex;
