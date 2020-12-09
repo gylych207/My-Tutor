@@ -261,6 +261,22 @@ justify-content: flex-end;
 align-items: flex-end; */
 
 }
+.example_c {
+
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 20px;
+
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  }
+  .example_c:hover {
+    color: #ffffff;
+    background: #9119c9;
+    border-color: #9119c9;
+    transition: all 0.4s ease 0s;
+    }
 .getHelp{
   width: 195.5px;
   height: 70px;
