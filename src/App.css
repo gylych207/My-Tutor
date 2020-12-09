@@ -142,17 +142,7 @@ opacity: 0.9;
   font-weight: 700;
   font-size: 30px;
 }
-input[type="submit"]{
-  margin-top:40px;
-  height: 80px;
-  font-size: 35px;
-  font-family: Lato;
-  font-weight: 700;
-  color: white;
-  background-color: #590995;
-  width:auto;
-  
-}
+
 ::placeholder {
   font-family: Lato;
   font-weight: 400;
@@ -223,23 +213,7 @@ align-self: center;
 align-self: baseline;
 margin-left: 35%;
 }
-.example_c {
-  
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #ffffff;
-  padding: 20px;
-border-radius: 5px;
-  display: inline-block;
-  transition: all 0.4s ease 0s;
-  }
-  .example_c:hover {
-    color: #ffffff ;
-    background: #b088f9;
-    border-color: #b088f9;
-    transition: all 0.4s ease 0s;
-    border-radius: 5px;
-    }
+
     .otherInfo{
       display: flex;
       flex-direction: column;
@@ -302,7 +276,7 @@ font-weight: bold;
 }
 
 .getHelp:hover{
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color:palevioletred;
 }
 .callAction{
   align-self: center;
@@ -324,9 +298,82 @@ margin: 0;
 padding: 0;
 font-weight: bold;
 }
+
 .getContainer{
   align-self: flex-start;
   margin-top: 1%;
   margin-left: 25%;
 
+}
+input[type="submit"]{
+  height: 150px;
+  font-size: 35px;
+  font-family: Lato;
+  font-weight: 700;
+  color: white;
+  background-color: #590995;
+  width:auto;
+  border-radius: 50px;
+  
+}
+/* Mobile Size */
+@media only screen and (max-width: 600px) {
+  .getContainer{
+    margin-top:50px;
+   display:flex;
+   margin-right: 50%;
+   margin-bottom:10%;
+  }
+ .get{
+   font-size:29px;
+   text-align:center;
+ }
+ .homePage{
+   align-items: center;
+   align-content:stretch;
+ }
+  .homePage img{
+    width: auto;
+    height: 260px;
+    margin-top: 50px;
+
+  }
+  .addTutors{
+    border: 3px solid red;
+    height: 100vh;
+  }
+ .addTutors p{
+   margin-left: 10%;
+   margin-right: 10%;
+   text-align: center;
+ }
+ .form > input{
+   height: 60px;
+   width: 250px;
+   margin:5px;
+ }
+ input[type='submit']{
+   margin-top:40px;
+   width: 100%;
+ }
+ .wallpaper{
+   height:270px;
+ }
+ .infoPage{
+   flex-direction: column;
+ }
+ .imgName img{
+   border: 3px solid red;
+   margin-bottom:10px;
+ }
+ .imgName{
+   height: 350px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ .about p{
+   margin-right: 20px;
+   margin-top: 10px;
+ }
+ 
 }

@@ -113,7 +113,7 @@ const AddTutor = (props) => {
 
           
         
-        <input type="submit" value='Become A Tutor'/>
+        <input type="submit" value='Become A Tutor' className="become"/>
       </form>
       </div>
       </div>
