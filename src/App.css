@@ -275,7 +275,7 @@ border-radius: 5px;
 background-image: linear-gradient(to right, #0779e4 0%, #c32fc8 100%);
 opacity: 0.77;
 width: 100%;
-height: 100%;
+height: 95vh;
 margin-top: 0%;
 display: flex;
 flex-direction: column;
