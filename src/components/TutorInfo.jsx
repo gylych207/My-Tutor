@@ -24,7 +24,7 @@ const TutorInfo = (props) => {
           <p className="tutoringInfo">You have {number} session</p>
           <button className='addSession' onClick={() => setNumber(number + 1)}>Add Session:</button>
           <button className='removeSession' onClick={() => number >= 1 ? setNumber(number - 1): 0}>Remove Session:</button>
-          <p className='tutoringInfo'>Total Price:{parseInt(number)*parseInt(props.tutorInfo.price)}</p>
+          <p className='tutoringInfo'>Total Price:{parseInt(number)*parseInt(props.tutorInfo.price)}$</p>
 
         </div>
       </div>
