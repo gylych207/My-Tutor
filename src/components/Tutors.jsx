@@ -1,14 +1,8 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { baseURL, config } from "../services";
-import { useParams } from "react-router-dom";
+
+import React, {useState } from "react";
 import { Link } from "react-router-dom";
-import TutorInfo from "./TutorInfo";
-import { useHistory } from "react-router-dom";
 
 const Tutors = (props) => {
-  // let { id } = useParams();
-  const [tutor, setTutor] = useState("");
   const [search, setSearch] = useState("");
 
   function searchInput(e) {
