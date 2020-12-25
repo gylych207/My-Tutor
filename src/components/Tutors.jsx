@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Tutors = (props) => {
 
-  const [tutor, setTutor] = useState("");
   const [search, setSearch] = useState("");
 
   function searchInput(e) {
