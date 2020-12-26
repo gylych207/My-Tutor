@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <Nav />
       <Route path="/tutors">
-        <Tutors data={data} setTutorInfo={setTutorInfo}/>
+        <Tutors data={data} setTutorInfo={setTutorInfo} setData={setData}/>
       </Route>
       <Route path="/AddTutor" >
         <AddTutor setToggleFetch={setToggleFetch}/>
