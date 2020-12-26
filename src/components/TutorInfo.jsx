@@ -13,9 +13,15 @@ const TutorInfo = (props) => {
       <div className="imgName">
         <p className='PortfolioName'>{props.tutorInfo.name}</p>
         <img src={props.tutorInfo.img} alt="" className="portfolioImg"></img>
+        <div className='crud'>
+          <input type='text' value='Edit'/>
+          <input type='text' value='Delete' />
+        </div>
       </div>
       <div className="about">
+        <div className='aboutMe'>
         <p>{props.tutorInfo.about}</p>
+       </div>
         <div class="button_cont" align="center"><Link to='/Payment'><span class="example_c" target="_blank" rel="nofollow noopener" onClick={()=>props.setTotal(parseInt(number)*parseInt(props.tutorInfo.price))}>BOOK</span></Link></div>
         <div className="otherInfo">
           <p className="tutoringInfo">Subject: {props.tutorInfo.lessons}</p>

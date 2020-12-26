@@ -201,7 +201,20 @@ select{
   width: auto;
 }
 .imgName > img {
-  margin-bottom: 140px;
+  margin-bottom: 10px;
+}
+.crud{
+  margin-left: 23%;
+  display: flex;
+  flex-direction: row;
+
+}
+.crud input{
+border-radius: 40px;
+border-style: none;
+text-align: center;
+width: 80px;
+
 }
 .imgName p {
   font-family: Lato;
@@ -231,7 +244,7 @@ select{
   text-transform: uppercase;
   text-decoration: none;
   background: #ffffff;
-  padding: 20px;
+  padding: 15px;
   display: inline-block;
   transition: all 0.4s ease 0s;
 }
@@ -242,7 +255,7 @@ select{
   transition: all 0.4s ease 0s;
 }
 .container {
-  border: 2px red white;
+
   display: table;
   margin: 0px auto;
 }
@@ -261,10 +274,14 @@ select{
   margin-left: 30px;
   font-family: "Product Sans";
   color: white;
+
 }
-.about > p {
-  margin-top: 100px;
-  margin-right: 80px;
+.aboutMe{
+
+margin-top: 35%;
+width: auto;
+height: 190px;
+text-align: center;
 }
 .book {
   align-self: baseline;
@@ -428,7 +445,7 @@ input[type="submit"] {
     margin-top: 50px;
   }
   .addTutors {
-    border: 3px solid red;
+
     height: 100vh;
   }
   .addTutors p {
@@ -452,13 +469,16 @@ input[type="submit"] {
     flex-direction: column;
   }
   .imgName img {
-    border: 3px solid red;
+
     margin-bottom: 10px;
   }
   .imgName {
     height: 350px;
     margin-left: auto;
     margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
   }
   .about p {
     margin-right: 20px;
