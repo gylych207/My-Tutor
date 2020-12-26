@@ -204,18 +204,35 @@ select{
   margin-bottom: 10px;
 }
 .crud{
-  margin-left: 23%;
+  margin-left: 20%;
   display: flex;
   flex-direction: row;
-
+  margin: 0 -5px;
+  justify-content: center;
 }
 .crud input{
 border-radius: 40px;
 border-style: none;
 text-align: center;
+margin: 0 9px;
 width: 80px;
+padding: 6px;
+color: #be2ceb !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ffffff;
+display: inline-block;
+transition: all 0.4s ease 0s;
+
 
 }
+.crud input:hover{
+  color: #ffffff !important;
+  background: #be2ceb;
+  border-color: #f6b93b !important;
+  transition: all 0.4s ease 0s;
+}
+
 .imgName p {
   font-family: Lato;
   font-weight: 700;
