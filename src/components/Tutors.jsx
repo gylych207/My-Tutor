@@ -1,5 +1,4 @@
-
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Tutors = (props) => {
@@ -23,17 +22,19 @@ const Tutors = (props) => {
           value={search}
           onChange={searchInput}
         />
-        <div className='sort'>
-          <button>name:A-Z</button>
-          <button>name:Z-A</button>
-          <button>Price:Ascending</button>
-          <button>Price:Descending</button>
-        </div>
+          <select>
+          <option value="A-Z">Alphabetically A-Z</option>
+          <option value="Z-A">Alphabetically Z-A</option>
+          <option value="low-high">Price low to high</option>
+          <option value="high-low"> Price high to low</option>
+        </select>
       </div>
       <div className="tutorsContainer">
         {props.data &&
           props.data
-            .filter((tutor) => tutor.fields.lessons.toLowerCase().includes(search))
+            .filter((tutor) =>
+              tutor.fields.lessons.toLowerCase().includes(search)
+            )
             .map((tutor) => {
               return (
                 <div className="tutorContainer">
