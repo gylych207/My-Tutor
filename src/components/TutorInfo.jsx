@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {useState} from "react";
-
+import { useState } from "react";
+import axios from "axios"
+import { baseURL, config } from "../services/index.js";
 const TutorInfo = (props) => {
   const [number, setNumber] = useState(1)
- 
- 
+
+  // const handleDelete = async () => {
+  //   const jokeURL = `${baseURL}/${props.joke.id}`;
+  //   await axios.delete(jokeURL, config);
+  //   props.setToggleFetch((prev) => !prev);
+  // };
+
   
 
   return (

@@ -5,7 +5,6 @@ const Tutors = (props) => {
   const [search, setSearch] = useState("");
   const [value, setValue] = useState("");
 
-
   function searchInput(e) {
     setSearch(e.target.value);
     let filterResult = props.data.filter((tutor) =>
@@ -53,7 +52,7 @@ const Tutors = (props) => {
         })
       );
     }
-    console.log('repeatedSortedData',props.data)
+
   }
 
   return (
@@ -79,10 +78,10 @@ const Tutors = (props) => {
             .filter((tutor) =>
               tutor.fields.lessons.toLowerCase().includes(search)
             )
-            .map((tutor,index) => {
+            .map((tutor) => {
               return (
                 <div className="tutorContainer">
-                  <Link to="/TutorInfo">
+                  <Link to={`/TutorInfo/${tutor.id}`}>
                     <p
                       className="name"
                       onClick={(e) => {
@@ -90,7 +89,7 @@ const Tutors = (props) => {
                           props.setTutorInfo(tutor.fields);
                         }
                       }}
-                      key={index}
+                      
                     >
                       {tutor.fields.name}
                     </p>
