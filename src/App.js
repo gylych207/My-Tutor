@@ -16,7 +16,7 @@ function App() {
   const [data, setData] = useState([]);
   const [tutorInfo, setTutorInfo] = useState(null);
   const[total,setTotal] = useState(null);
-  const [toggleFetch, setToggleFetch] = useState(false);
+ 
 
 
   useEffect(() => {
@@ -35,15 +35,17 @@ function App() {
    
     <div className="App">
       <Nav />
-      <EditTutor path='/edit'/>
+      <Route path='/edit/:id'>
+        <EditTutor data={data}/>
+        </Route>
       <Route path="/tutors">
         <Tutors data={data} setTutorInfo={setTutorInfo} setData={setData}/>
       </Route>
       <Route path="/AddTutor" >
-        <AddTutor setToggleFetch={setToggleFetch}/>
+        <AddTutor />
       </Route>
       <Route path="/TutorInfo" >
-        <TutorInfo tutorInfo={tutorInfo} setTotal={setTotal} setToggleFetch={setToggleFetch}/>
+        <TutorInfo tutorInfo={tutorInfo} setTotal={setTotal} />
       </Route>
       <Route path="/Payment"  >
         <Payment tutorInfo={tutorInfo} total={total}/>

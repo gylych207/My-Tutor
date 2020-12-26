@@ -28,7 +28,7 @@ const TutorInfo = (props) => {
         <p className='PortfolioName'>{props.tutorInfo.fields.name}</p>
         <img src={props.tutorInfo.fields.img} alt="" className="portfolioImg"></img>
         <div className='crud'>
-          <input type='text' value='Edit'/>
+          <Link to={`/edit/${props.tutorInfo.id}`}><input type='text' value='Edit'/></Link>
           <input type='text' value='Delete' onClick={handleDelete}/>
         </div>
       </div>
