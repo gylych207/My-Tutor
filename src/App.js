@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Route } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 import axios from 'axios';
 import { baseURL, config } from "./services";
 import './App.css';
@@ -10,6 +9,7 @@ import Nav from './components/Nav';
 import TutorInfo from "./components/TutorInfo";
 import Payment from "./components/Payment"
 import Home from "./components/Home.jsx"
+import EditTutor from "./components/EditTutor.jsx"
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
    
     <div className="App">
       <Nav />
+      <EditTutor path='/edit'/>
       <Route path="/tutors">
         <Tutors data={data} setTutorInfo={setTutorInfo} setData={setData}/>
       </Route>
