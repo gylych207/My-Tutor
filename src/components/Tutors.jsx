@@ -20,6 +20,13 @@ console.log('myData',props.data)
         return a.fields.price - b.fields.price;
       }))
     }
+    if (e.target.value === "high-low") {
+      props.setData(
+        props.data.sort(function (a, b) {
+          return b.fields.price - a.fields.price;
+        })
+      );
+    }
   }
   console.log(value);
   return (
