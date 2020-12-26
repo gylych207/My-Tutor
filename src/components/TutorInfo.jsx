@@ -7,11 +7,17 @@ import { baseURL, config } from "../services/index.js";
 const TutorInfo = (props) => {
   const [number, setNumber] = useState(1)
   let history = useHistory();
-  
+
+  function pageReload() {
+    return window.location.reload();
+  }
+
   const handleDelete = async () => {
     const tutorUrl = `${baseURL}/${props.tutorInfo.id}`;
     await axios.delete(tutorUrl, config);
-    history.push("/");
+    history.push("/tutors");
+    pageReload();
+    
   };
 
   
