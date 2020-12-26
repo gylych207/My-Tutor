@@ -86,7 +86,7 @@ const Tutors = (props) => {
                       className="name"
                       onClick={(e) => {
                         if (e.target.textContent === tutor.fields.name) {
-                          props.setTutorInfo(tutor.fields);
+                          props.setTutorInfo(tutor);
                         }
                       }}
                       
