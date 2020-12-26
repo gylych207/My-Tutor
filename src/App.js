@@ -28,6 +28,7 @@ function App() {
     }
     getData();
   }, []);
+  console.log('main data is',data)
 
   
   return (

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const Tutors = (props) => {
   const [search, setSearch] = useState("");
+  const [value, setValue] = useState("");
+console.log('myData',props.data)
 
   function searchInput(e) {
     setSearch(e.target.value);
@@ -11,7 +13,15 @@ const Tutors = (props) => {
     );
     console.log(filterResult);
   }
-
+  function Select(e) {
+    setValue(e.target.value)
+    if (e.target.value === 'low-high') {
+      props.setData(props.data.sort(function (a, b) {
+        return a.fields.price - b.fields.price;
+      }))
+    }
+  }
+  console.log(value);
   return (
     <div className="tutorsPage">
       <div className="wallpaper">
@@ -22,7 +32,7 @@ const Tutors = (props) => {
           value={search}
           onChange={searchInput}
         />
-          <select>
+          <select onChange={Select}>
           <option value="A-Z">Alphabetically A-Z</option>
           <option value="Z-A">Alphabetically Z-A</option>
           <option value="low-high">Price low to high</option>
@@ -35,7 +45,7 @@ const Tutors = (props) => {
             .filter((tutor) =>
               tutor.fields.lessons.toLowerCase().includes(search)
             )
-            .map((tutor) => {
+            .map((tutor,index) => {
               return (
                 <div className="tutorContainer">
                   <Link to="/TutorInfo">
@@ -46,6 +56,7 @@ const Tutors = (props) => {
                           props.setTutorInfo(tutor.fields);
                         }
                       }}
+                      key={index}
                     >
                       {tutor.fields.name}
                     </p>
