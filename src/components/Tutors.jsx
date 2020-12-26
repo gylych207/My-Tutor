@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 const Tutors = (props) => {
   const [search, setSearch] = useState("");
   const [value, setValue] = useState("");
-console.log('myData',props.data)
+
 
   function searchInput(e) {
     setSearch(e.target.value);
     let filterResult = props.data.filter((tutor) =>
       tutor.fields.lessons.toLowerCase().includes(search)
     );
-    console.log(filterResult);
+ 
   }
   function Select(e) {
     setValue(e.target.value)
@@ -27,8 +27,35 @@ console.log('myData',props.data)
         })
       );
     }
+    if (e.target.value === "A-Z") {
+      props.setData(
+        props.data.sort(function (a, b) {
+          if (a.fields.name > b.fields.name) {
+            return 1;
+          }
+          if (a.fields.name < b.fields.name) {
+            return -1;
+          }
+          return 0;
+        })
+      );
+    }
+    if (e.target.value === "Z-A") {
+      props.setData(
+        props.data.sort(function (a, b) {
+          if (a.fields.name > b.fields.name) {
+            return -1;
+          }
+          if (a.fields.name < b.fields.name) {
+            return 1;
+          }
+          return 0;
+        })
+      );
+    }
+    console.log('repeatedSortedData',props.data)
   }
-  console.log(value);
+
   return (
     <div className="tutorsPage">
       <div className="wallpaper">
