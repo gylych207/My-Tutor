@@ -42,7 +42,7 @@ function App() {
         <AddTutor setToggleFetch={setToggleFetch}/>
       </Route>
       <Route path="/TutorInfo" >
-        <TutorInfo tutorInfo={tutorInfo} setTotal={setTotal}/>
+        <TutorInfo tutorInfo={tutorInfo} setTotal={setTotal} setToggleFetch={setToggleFetch}/>
       </Route>
       <Route path="/Payment"  >
         <Payment tutorInfo={tutorInfo} total={total}/>

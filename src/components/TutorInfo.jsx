@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios"
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 import { baseURL, config } from "../services/index.js";
 const TutorInfo = (props) => {
   const [number, setNumber] = useState(1)
-
-  // const handleDelete = async () => {
-  //   const jokeURL = `${baseURL}/${props.joke.id}`;
-  //   await axios.delete(jokeURL, config);
-  //   props.setToggleFetch((prev) => !prev);
-  // };
+  let history = useHistory();
+  
+  const handleDelete = async () => {
+    const tutorUrl = `${baseURL}/${props.tutorInfo.id}`;
+    await axios.delete(tutorUrl, config);
+    history.push("/");
+  };
 
   
 
@@ -21,7 +23,7 @@ const TutorInfo = (props) => {
         <img src={props.tutorInfo.fields.img} alt="" className="portfolioImg"></img>
         <div className='crud'>
           <input type='text' value='Edit'/>
-          <input type='text' value='Delete' />
+          <input type='text' value='Delete' onClick={handleDelete}/>
         </div>
       </div>
       <div className="about">
