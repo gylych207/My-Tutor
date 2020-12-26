@@ -24,8 +24,8 @@ const Tutors = (props) => {
           onChange={searchInput}
         />
         <div className='sort'>
-          <button>name:AZ</button>
-          <button>name:ZA</button>
+          <button>name:A-Z</button>
+          <button>name:Z-A</button>
           <button>Price:Ascending</button>
           <button>Price:Descending</button>
         </div>
