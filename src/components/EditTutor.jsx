@@ -28,7 +28,9 @@ const EditTutor = (props) => {
       setImg(tutor.fields.img);
     }
   }, [props.data, params.id]);
-  
+  function pageReload() {
+    return window.location.reload();
+  }
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,6 +52,8 @@ const EditTutor = (props) => {
       await axios.post(baseURL, { fields }, config);
     }
     history.push("/Tutors");
+    pageReload();
+    
   };
 
   // ...what next?
